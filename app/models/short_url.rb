@@ -4,7 +4,7 @@ class ShortUrl < ApplicationRecord
                            format: URI::DEFAULT_PARSER.make_regexp(%w[http https]),
                            length: {minimum:11, maximum:255}
 
-  before_validation :generate_slug
+  before_create :generate_slug
 
   def generate_slug
     self.slug = SecureRandom.uuid[0..5]
