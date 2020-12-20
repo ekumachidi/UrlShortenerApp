@@ -1,0 +1,27 @@
+<div style="color: white;">
+  <p id="notice"><%= notice %></p>
+
+  <h1 style="txt-center m2-txt1">Most Viewed links</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Link</th>
+        <th>Title</th>
+        <th>Visits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @short_urls.each do |short_url| %>
+        <tr>
+          <td><%= ENV['HOST_URL'] + short_url.slug %></td>
+          <td><%= short_url.title %></td>
+          <td><%= short_url.visits %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+
+<%= link_to 'Go to Homepage', root_path, class: "flex-c-m s1-txt1 size2 how-btn trans-04 where1" %>
