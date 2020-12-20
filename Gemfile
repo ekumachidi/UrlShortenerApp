@@ -12,6 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+gem 'sidekiq'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -21,8 +22,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'dotenv-rails'
-  gem 'rspec-rails', '~> 3.5'
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
+  gem 'rspec-rails', '~> 4.0'
+  gem 'capybara'
 end
 
 group :development do

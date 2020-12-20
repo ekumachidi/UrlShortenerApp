@@ -1,0 +1,3 @@
+class FetchPageTitleJob < ApplicationJob
+
+end
