@@ -1,0 +1,21 @@
+<%= form_with(model: @short_url, local: true, class: "flex-w flex-c-m contact100-form p-t-70") do |form| %>
+  <% if @short_url.errors.any? %>
+    <div id="error_explanation" style="color: red;">
+      <h2> <i class="zmdi zmdi-alert-triangle"></i> This URL could not be shortened due to <%= pluralize(@short_url.errors.count, "error") %> </h2>
+
+      <ul>
+        <% @short_url.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="wrap-input100 validate-input where1">
+    <%= form.text_field :original_url, class: "s1-txt1 placeholder0 input100", placeholder: "Your URL..." %>
+  </div>
+  <div class="control">
+      <%= form.submit "Shorten", class: "flex-c-m s1-txt1 size2 how-btn trans-04 where1" %>
+  </div>
+  <p id="notice" class="txt-center m2-txt1 p-b-67"><%= notice %></p>
+  <%= link_to 'See the most visited pages', short_urls_path, class: "flex-c-m s1-txt1 size2 trans-04 where1" %>
+<% end %>
