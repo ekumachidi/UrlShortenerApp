@@ -22,6 +22,10 @@ RSpec.describe ShortUrl, type: :model do
     it "is valid with valid attributes" do
       expect(subject).to be_valid
     end
+
+    it "should generate_slug" do
+      url.slug.should be_present
+    end
   end
 
 end
