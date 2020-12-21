@@ -102,6 +102,7 @@ heroku open
 
 
 ## Services 
+- Postgres
 - Redis
 - Sidekiq
 
