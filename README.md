@@ -1,4 +1,14 @@
 
+<!-- TABLE OF CONTENTS -->
+# Table of Contents
+- [About The Project](#about-the-project)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Deployment instructions](#deployment-instructions)
+- [Services](#services)
+- [Assumptions and Design Considerations](#assumptions-and-design-considerations) 
+- [Contact](#contact)
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 This is a URL shortener app similar to [bit.ly](http://bit.ly).
